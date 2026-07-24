@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm -v)",
+      "Bash(npx -v)",
+      "PowerShell(node -v)",
+      "PowerShell(npm -v)",
+      "PowerShell(npx -v)",
+      "PowerShell(Test-Path \"C:\\\\Program Files\\\\nodejs\\\\node.exe\"; Test-Path \"$env:APPDATA\\\\npm\\\\node.exe\"; $machinePath = [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"Machine\"\\); $userPath = [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"User\"\\); \"MACHINE: $machinePath\"; \"USER: $userPath\")",
+      "PowerShell($env:Path = [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"User\"\\); node -v; npm -v; npx -v)",
+      "Bash(dir)",
+      "PowerShell($env:Path = [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"User\"\\); npx skills add emilkowalski/skill)"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PROJECT_DIR}/.claude/skills/impeccable/scripts/hook.mjs\"",
+            "timeout": 5,
+            "statusMessage": "Checking UI changes"
+          }
+        ]
+      }
+    ]
+  },
+  "description": "Impeccable design detector: runs after Edit/Write/MultiEdit on UI files and surfaces findings as system reminders."
+}
