@@ -10,7 +10,7 @@ import RuneInput from "./RuneInput";
 import { playSfx } from "@/lib/audio";
 import { markRevealed } from "@/lib/gateSignal";
 
-const cinzel = Cinzel({ subsets: ["latin"], weight: ["500", "700", "900"] });
+const cinzel = Cinzel({ subsets: ["latin"], weight: ["500", "700", "900"], display: "swap" });
 
 const STORAGE_KEY = "dnd-gate-unlocked";
 const PASSWORD = "bund";
