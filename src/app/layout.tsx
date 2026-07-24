@@ -9,24 +9,29 @@ const playfair = Playfair_Display({
   subsets: ["latin"],
   style: ["normal", "italic"],
   weight: ["500", "600", "700", "800", "900"],
+  display: "swap",
 });
 
 const sora = Sora({
   variable: "--font-sora",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
+  display: "swap",
 });
 
 const bigShoulders = Big_Shoulders({
   variable: "--font-big-shoulders",
   subsets: ["latin"],
   weight: ["600", "700", "800"],
+  display: "swap",
+  adjustFontFallback: false,
 });
 
 const anton = Anton({
   variable: "--font-anton",
   subsets: ["latin"],
   weight: ["400"],
+  display: "swap",
 });
 
 const bodoni = Bodoni_Moda({
@@ -34,6 +39,7 @@ const bodoni = Bodoni_Moda({
   subsets: ["latin"],
   style: ["normal", "italic"],
   weight: ["400", "500", "600", "700"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
