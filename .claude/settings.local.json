@@ -9,7 +9,8 @@
       "PowerShell(Test-Path \"C:\\\\Program Files\\\\nodejs\\\\node.exe\"; Test-Path \"$env:APPDATA\\\\npm\\\\node.exe\"; $machinePath = [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"Machine\"\\); $userPath = [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"User\"\\); \"MACHINE: $machinePath\"; \"USER: $userPath\")",
       "PowerShell($env:Path = [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"User\"\\); node -v; npm -v; npx -v)",
       "Bash(dir)",
-      "PowerShell($env:Path = [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"User\"\\); npx skills add emilkowalski/skill)"
+      "PowerShell($env:Path = [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"User\"\\); npx skills add emilkowalski/skill)",
+      "Bash(mdfind \"kMDItemFSName == 'node'\")"
     ]
   },
   "hooks": {

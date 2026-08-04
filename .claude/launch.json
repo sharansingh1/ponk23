@@ -3,8 +3,8 @@
   "configurations": [
     {
       "name": "ponky-bday-dev",
-      "runtimeExecutable": "C:\\Program Files\\nodejs\\node.exe",
-      "runtimeArgs": ["node_modules/next/dist/bin/next", "dev"],
+      "runtimeExecutable": ".claude/dev.sh",
+      "runtimeArgs": [],
       "port": 3000
     }
   ]

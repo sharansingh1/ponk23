@@ -51,7 +51,7 @@ export default function HeroGlass({
       {/* Scroll flight plane: sweeps across the screen, surges toward the
           viewer, then tips over as the journey begins. */}
       <motion.div
-        className="absolute right-[4%] bottom-[2%] w-[42vmin] md:right-[10%] md:bottom-[4%] md:w-[52vmin] will-change-transform"
+        className="absolute right-[16%] bottom-[2%] w-[42vmin] md:right-[22%] md:bottom-[4%] md:w-[52vmin] will-change-transform"
         style={{
           x: scrollX,
           y: scrollY,
